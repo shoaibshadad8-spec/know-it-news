@@ -1,0 +1,13 @@
+getWeatherData()
+getCurrencyData('USD')
+getCurrencyData('SAR')
+// getCurrencyData('EUR')
+// getCurrencyData('GBP')
+// getCurrencyData('KWD')
+getNewsData('sports')
+getNewsData('education')
+getNewsData('entertainment')
+// getNewsData('politics')
+// getNewsData('science')
+
+getSportsData()

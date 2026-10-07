@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جدول ترتيب الدوريات والبطولات</title>
+    <!-- Bootstrap 5 RTL CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .league-card {
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            padding: 25px;
+        }
+        .table-custom th {
+            background-color: #0d6efd;
+            color: white;
+            text-align: center;
+        }
+        .table-custom td {
+            text-align: center;
+            vertical-align: middle;
+        }
+        .team-flag {
+            width: 25px;
+            height: 25px;
+            object-fit: contain;
+            margin-left: 8px;
+        }
+        .rank-badge {
+            width: 28px;
+            height: 28px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+        .rank-1 { background-color: #ffd700; color: #000; }
+        .rank-2 { background-color: #c0c0c0; color: #000; }
+        .rank-3 { background-color: #cd7f32; color: #fff; }
+        .rank-other { background-color: #e9ecef; color: #495057; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+        <div class="container">
+            <a class="navbar-link navbar-brand fw-bold" href="index.html">KNOW IT ⚽</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-4">
+        <div class="league-card">
+            <h2 class="text-center text-primary mb-4 fw-bold">
+                <i class="fa-solid fa-trophy text-warning me-2"></i> جدول ترتيب الفرق والدوريات
+            </h2>
+
+            <form id="leagueForm" class="row g-3 justify-content-center mb-4">
+                <div class="col-md-6 col-lg-5">
+                    <label for="leagueSelect" class="form-label fw-bold">اختر البطولة أو الدوري:</label>
+                   <select id="leagueSelect" class="form-select form-select-lg shadow-sm">
+    <option value="" selected disabled>-- اختر من القائمة --</option>
+    <optgroup label="أشهر الدوريات المتاحة في API">
+        <option value="PL">الدوري الإنجليزي الممتاز (Premier League) 🏴󠁧󠁢󠁥󠁮󠁧󠁿</option>
+        <option value="PD">الدوري الإسباني (La Liga) 🇪🇸</option>
+        <option value="SA">الدوري الإيطالي (Serie A) 🇮🇹</option>
+        <option value="BL1">الدوري الألماني (Bundesliga) 🇩🇪</option>
+        <option value="FL1">الدوري الفرنسي (Ligue 1) 🇫🇷</option>
+        <option value="CL">دوري أبطال أوروبا (Champions League) 🇪🇺</option>
+        <option value="DED">الدوري الهولندي (Eredivisie) 🇳🇱</option>
+        <option value="BSA">الدوري البرازيلي (Brasileirão) 🇧🇷</option>
+    </optgroup>
+</select>
+                </div>
+            </form>
+
+            <div id="loadingSpinner" class="text-center d-none my-5">
+                <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;">
+                    <span class="visually-hidden">جاري التحميل...</span>
+                </div>
+                <p class="mt-2 text-muted">جاري جلب جدول الترتيب...</p>
+            </div>
+
+            <div id="standingsContainer" class="table-responsive">
+                <p class="text-center text-muted fs-5 my-5">الرجاء اختيار دوري من القائمة أعلاه لعرض الترتيب.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Script -->
+    <script src="/js/standings.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
