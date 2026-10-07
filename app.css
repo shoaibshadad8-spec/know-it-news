@@ -21,7 +21,6 @@ body {
     line-height: 1.6;
 }
 
-/* عشان كلاس text-primary بتاع Bootstrap ياخد لونك */
 .text-primary {
     color: var(--primary-color) !important;
 }
@@ -68,7 +67,6 @@ main h2.display-3 {
     color: #1e293b !important;
 }
 
-/* خط ديكوري تحت عناوين الأقسام */
 main h2.display-3::after {
     content: '';
     position: absolute;
@@ -106,7 +104,6 @@ main h2.display-3::after {
     border-color: #cbd5e1;
 }
 
-/* تنسيق صور الأخبار */
 #sports-news img.img-fluid,
 #entertainment-news img.img-fluid,
 #education-news img.img-fluid {
@@ -117,7 +114,6 @@ main h2.display-3::after {
     margin-bottom: 12px;
 }
 
-/* عناوين الأخبار */
 #sports-news h4,
 #entertainment-news h4,
 #education-news h4 {
@@ -156,7 +152,6 @@ aside h4.display-5 {
     padding-bottom: 10px;
 }
 
-/* كارت الطقس */
 #temp {
     background: linear-gradient(135deg, #7c3aed 0%, #c084fc 100%);
     color: white;
@@ -179,7 +174,6 @@ aside h4.display-5 {
     opacity: 0.9;
 }
 
-/* قسم العملات */
 #currency .row {
     padding: 10px 0;
     border-bottom: 1px dashed #e2e8f0;
